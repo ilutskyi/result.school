@@ -1,16 +1,24 @@
-const slides = document.querySelectorAll(".slide")
+function slidesPlugin(activeSlide = Math.round(Math.random() * 5)) {
 
-for (const slide of slides) {
-
-    slide.addEventListener("click", event => {
-        clearActiveClasses();
-        slide.classList.add("active");
-    });
+    const slides = document.querySelectorAll(".slide");
+    
+    slides[activeSlide].classList.add("active")
+    
+    for (const slide of slides) {
+    
+        slide.addEventListener("click", event => {
+            clearActiveClasses();
+            slide.classList.add("active");
+        });
+    
+    }
+    
+    function clearActiveClasses() {
+        slides.forEach(slide => {
+            slide.classList.remove("active");
+        });
+    }
 
 }
 
-function clearActiveClasses() {
-    slides.forEach(slide => {
-        slide.classList.remove("active");
-    });
-}
+slidesPlugin();
