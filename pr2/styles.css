@@ -2,11 +2,11 @@
 
 * {
   box-sizing: border-box;
+  background-color: #e5e5e5;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #e5e5e5;
   display: flex;
   padding-top: 5rem;
   justify-content: center;
@@ -61,4 +61,23 @@ body {
 
 .done {
   background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.hold {
+  border: 2px solid #B9B4C7;
+  background-color: #FAF0E6;
+  font-weight: bold;
+  font-size: 110%;
+}
+
+.hide {
+  display: none;
+}
+
+.hovered {
+  border: 4px dashed #B9B4C7;
+  border-radius: 12px;
+  width: 170px;
+  height: 75px;
+  background-color: #d5d5d5;
 }
